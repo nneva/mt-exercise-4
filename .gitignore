@@ -56,7 +56,6 @@ coverage.xml
 *.pot
 
 # Django stuff:
-*.log
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
@@ -133,7 +132,7 @@ shared_models
 data
 models
 translations
-logs
 tools
+configs
 
 .DS_Store
