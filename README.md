@@ -62,7 +62,7 @@ The training process can be interrupted at any time, and the best checkpoint wil
 
 On cpu [2.5 GHz Quad-Core Intel Core i7, 4 cores] approx. training time **per 1 epoch**: 2 hours.
 
-On cpu [VM Standard_D32d, 32 cores] approx. training time **per 10**: 2 hours. 🙃
+On cpu [VM Standard_D32d, 32 cores] approx. training time **per 10 epochs**: 2 hours. 🙃
 
 Log files are reordered manually.
 
