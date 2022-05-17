@@ -66,6 +66,10 @@ On cpu [VM Standard_D32d, 32 cores] approx. training time **per 10 epochs**: 2 h
 
 Log files are reordered manually.
 
+To get table and chart:
+
+    python scripts/visualization.py
+
 📝 Evaluate a trained model with
 
     ./scripts/evaluate.sh
