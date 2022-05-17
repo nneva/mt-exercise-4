@@ -7,9 +7,9 @@ from typing import Tuple, List
 
 def get_perplexities(*files) -> List[List[str]]:
 
-    with open("logs/baseline.log") as base, \
-        open("logs/prenorm.log") as pre, \
-        open("logs/postnorm.log") as post:
+    with open("mt-exercise-4/logs/baseline.log") as base, \
+        open("mt-exercise-4/logs/prenorm.log") as pre, \
+        open("mt-exercise-4/logs/postnorm.log") as post:
 
         base_ppl = re.findall(r"\sppl:\s\s\s?(\d\d?.\d+)", base.read())
         pre_ppl = re.findall(r"\sppl:\s\s\s?(\d\d?.\d+)", pre.read())
@@ -37,14 +37,13 @@ def get_data_frame(models: List[str], step:List[str],
 
             
 def save_charts(name: str, table: pd.DataFrame):
-    """Generate line chart for train. and valid. perplexity.
-        :param chart: Path to save a line chart as string.
+    """Generate line chart three models.
+        :param name: Path to save a line chart as string.
         :param table: Data frame for the corresponding perplexity.
-        :param ppl: Tuple containing name of the perplexity and its corresponding values.
     """
     sns.set(font_scale=1.5, style="darkgrid")
     table = table.drop(labels="Validation ppl", axis=1).apply(pd.to_numeric)
-    sns.relplot(data=table, kind="line", palette="cool", height=6, aspect=1.5).set(ylabel="Perplexity", xlabel="Epoch step")
+    sns.relplot(data=table, kind="line", palette="tab10", height=6, aspect=1.5).set(ylabel="Perplexity", xlabel="Epoch step")
     plt.savefig("line_chart.png")
 
 
@@ -56,6 +55,7 @@ def main():
     ppls = get_perplexities()
     table = get_data_frame(models, step, ppls)
     table.to_markdown("table.md", index=False)
+    table.to_latex("table.tex", index=False)
     save_charts("line_chart.png", table)
 
     
