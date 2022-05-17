@@ -70,6 +70,8 @@ To get table and chart:
 
     python scripts/visualization.py
 
+Make sure to run from right directory, if needed. Table & Chart are included in PDF.
+
 📝 Evaluate a trained model with
 
     ./scripts/evaluate.sh
