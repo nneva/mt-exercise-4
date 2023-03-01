@@ -1,4 +1,4 @@
-# MT Exercise 4: Layer Normalization for Transformer Models
+# Layer Normalization for Transformer Models
 
 This repo is just a collection of scripts showing how to install [JoeyNMT](https://github.com/joeynmt/joeynmt), download
 data and train & evaluate models.
@@ -15,7 +15,7 @@ data and train & evaluate models.
 
 🧑‍🤝‍🧑 Clone this repository or your fork thereof in the desired place:
 
-    git clone https://github.com/nneva/mt-exercise-4
+    git clone https://github.com/nneva/layer-norm
 
 💻 Create a new virtualenv that uses Python 3. Please make sure to run this command outside of any virtual Python environment:
 
@@ -69,8 +69,6 @@ Log files are reordered manually.
 To get table and chart:
 
     python scripts/visualization.py
-
-Make sure to run from right directory, if needed. Table & Chart are included in PDF.
 
 📝 Evaluate a trained model with
 
